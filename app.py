@@ -54,7 +54,7 @@ def generate_stickers(invoice_number, total_boxes):
     """
     Generates a PDF with stickers.
     """
-    output_file = f"static/stickers_{invoice_number}.pdf"
+    output_file = os.path.join('static', f'stickers_{invoice_number}.pdf')
     c = canvas.Canvas(output_file, pagesize=A4)
 
     current_box = 1
